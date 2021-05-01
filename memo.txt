@@ -1,0 +1,27 @@
+Q >> badge 위치 이상: badge 의 위치가 absolute로 하면 heading 의 .inner의 위치에 잡힌다. 로고등 모든게 다 header .logo / header .badge 로 하면 .inner위치 기준으로 됨.
+A >> 알고보니 div .badge 작성할때 실수로 .inner 안에 자식으로 작성함. .inner 바깥부분으로 옮기니 잘 작동.
+      </ul>
+      <div class="badges">
+        <div class="badge">
+          <img src="./images/badge1.jpg" alt="Badge">
+        </div>
+        <div class="badge">
+          <img src="./images/badge2.jpg" alt="Badge">
+        </div>
+      </div>
+    </div> -- .inner가 끝나는 부분
+  </header>
+
+after
+
+      </ul>
+    </div> -- .inner가 끝나는 부분
+    <div class="badges">
+      <div class="badge">
+        <img src="./images/badge1.jpg" alt="Badge">
+      </div>
+      <div class="badge">
+        <img src="./images/badge2.jpg" alt="Badge">
+      </div>
+    </div>
+  </header>
