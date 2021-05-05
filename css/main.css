@@ -5,7 +5,6 @@ body{
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
-  height: 3000px;
 }
 
 img {
@@ -85,6 +84,34 @@ a {
 .btn.btn--white:hover {
   color: #333;
   background-color: #fff;
+}
+
+/* 나타났다 사라졌다 기능 */
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+}
+.back-to-position.to-right { /* 왼쪽으로 이동된 상태 > 안보임 */
+  transform: translateX(-150px);
+}
+.back-to-position.to-left { /* 오른쪽으로 이동된 상태 > 안보임 */
+  transform: translateX(150px);
+}
+.show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-0 {
+  transition-delay: 0;
+}
+.show .back-to-position.delay-1 {
+  transition-delay: .3s;
+}
+.show .back-to-position.delay-2 {
+  transition-delay: .6s;
+}
+.show .back-to-position.delay-3 {
+  transition-delay: .9s;
 }
 
 /* HEADER */
@@ -367,8 +394,7 @@ header .badges .badge {
 }
 
 .notice .notice-line {
-  position: relative;
-  
+  position: relative;  
 }
 
 .notice .notice-line .bg-left {
@@ -549,8 +575,8 @@ header .badges .badge {
   width: 42px;
   height: 42px;
   position: absolute;
-  border: 2px solid #333;
-  border-radius: 50%;
+  border: 2px solid #333; /* 테두리 만들기 */
+  border-radius: 50%; /* 테두리 둥글게 */
   cursor: pointer;
   z-index: 1;
   top: 300px;
@@ -655,7 +681,6 @@ header .badges .badge {
   display: block; /* before는 가상요소(inline)라서 가로/세로 너비를 가질 수 없으므로 block 으로*/
   width: 100%;
   padding-top: 56.25%; /* height 설정한 적 없지만 이걸로 16:9 비율의 area 만들어 줌. */
-
 }
 
 .youtube .youtube__cover {
@@ -673,3 +698,373 @@ header .badges .badge {
   top: 0;
   left: 0;
 }
+
+.youtube .inner {
+  height: 700px;  
+}
+
+.youtube .floating1 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.youtube .floating2 {
+  position: absolute;
+  top: 350px;
+  left: 150px;
+}
+
+
+/* <!-- SEASON PRODUCT --> */
+.season-product {  
+  background-image: url("../images/season_product_bg.jpg");
+}
+
+.season-product .inner {
+  height: 400px;    
+}
+
+.season-product .floating3 {
+  position: absolute;
+  top: -200px;
+  right: 0;
+}
+
+.season-product .inner .text-group {
+  position: absolute;
+  top: 110px;
+  right: 100px; 
+}
+
+.season-product .inner .text-group .title {
+  margin-bottom: 10px;
+}
+.season-product .inner .text-group .description {
+  margin-bottom: 15px;
+}
+
+.season-product .inner .text-group .more {
+}
+
+
+/* <!-- RESERVE COFFEE --> */
+.reserve-coffee {
+  background-image: url("../images/reserve_bg.jpg");
+}
+
+.reserve-coffee .inner {
+  height: 400px;
+}
+
+.reserve-coffee .reserve-logo {  
+  left: 0;
+  top: 110px;
+  position: absolute;
+}
+
+.reserve-coffee .inner .text-group {
+  top: 124px;
+  left: 208px;
+  position: absolute;
+}
+
+.reserve-coffee .inner .description {
+
+}
+
+.reserve-coffee .inner .btn.btn--brown {
+
+}
+
+.reserve-coffee .inner .product {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+/* <!-- PICK YOUR FAVORITE --> */
+.pick-your-favorite {  /* 패럴렉스 */
+  background-image: url("../images/favorite_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* 이미지가 스크롤과 함께 움직이지 않고 고정 */
+  background-size: cover; /* 이미지를 더 크게 사용 */
+}
+
+.pick-your-favorite .inner {
+  padding: 110px 0;
+}
+
+.pick-your-favorite .text-group {
+  margin-left: 100px;
+  display: flex; /* 요소들이 수평정렬이 됨 */
+  width: 362px; /* 넘치는 부분이 생김 width에 비해 내용이 길기때문 */
+  flex-wrap: wrap; /* 줄바꿈 */
+  justify-content: flex-end ; /* 오른쪽 정렬 */
+}
+
+.pick-your-favorite .text-group .title {
+  margin-bottom: 40px;  
+}
+
+.pick-your-favorite .text-group .description {
+  margin-bottom: 40px;
+}
+
+
+/* <!-- RESERVE STORE --> */
+.reserve-store {
+  background-image: url("../images/reserve_store_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.reserve-store .inner {
+  height: 600px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserve-store .medal{  
+  /* 가로사이즈는 늘어나려고 함. 명시 필요. 밑에 font/back 사이즈와 같게 함. */
+  /* position: relative 필요 없음. 왜냐면 width/height 값이 완벽하게 들어있기 때문에 특별한 설정이 필요 x */
+  width: 334px;
+  height: 334px;
+  perspective: 600px;
+}
+
+.reserve-store .medal .front,
+.reserve-store .medal .back{
+  width: 334px;
+  height: 334px;
+  backface-visibility: hidden;
+  transition: 1s;     
+  position: absolute;
+}
+
+.reserve-store .medal .front{  
+  transform: rotateY(0deg);
+}
+.reserve-store .medal:hover .front {
+  transform: rotateY(180deg);
+}
+.reserve-store .medal .back{
+  transform: rotateY(-180deg);
+}
+.reserve-store .medal:hover .back {
+  transform: rotateY(0deg);
+}
+.reserve-store .medal .back .btn{
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/* 내가 실수했던 점 hover를 medal에 넣어야 함. medal이 지분을 차지하고 있으므로. 나는 front:hover 로 해서 효과가 먹질 않았음. */
+
+
+/* <!-- FIND THE STORE --> */
+.find-store {
+  background-image: url("../images/find_store_bg.jpg");  
+}
+.find-store .inner {
+  /* position: relative 이미 설정되 있음 */
+  height: 400px;
+}
+.find-store .texture1 {
+  position: absolute;
+  top: 0;
+  left: 400px;  
+}
+.find-store .texture2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.find-store .picture {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgba(0,0,0,.5);
+}
+.find-store .picture1 {  
+  left: 0;
+  top: -60px;
+}
+.find-store .picture2 {  
+  left: 250px;
+  top: 150px;
+}
+.find-store .text-group {
+  position: absolute;
+  left: 550px;
+  top: 120px;
+}
+.find-store .text-group .title {
+  margin-bottom: 20px;
+}
+.find-store .text-group .description {
+  margin-bottom: 20px;
+}
+
+
+/* <!-- AWARDS  --> */
+.awards {
+  background-color: #272727;
+}
+.awards .inner { 
+  padding: 40px 0;
+}
+.awards .swiper-container {
+  width: 100%;
+  height: 40px;
+}
+
+.awards .swiper-prev,
+.awards .swiper-next {  
+  width: 42px; /* 테두리 사이즈 */
+  height: 42px;
+  border: 2px solid #fff; /*화살표 감싸는 테두리 */
+  border-radius: 50%; /* 화살표 감싸는 테두리 둥글게 */
+  outline: none; /* 선택되었을 때 주변 outline이 파랗게 되지 않게  */
+  color: #fff; /* 화살표 색 */
+  opacity: .3; 
+  cursor: pointer; /* 버튼이라는 것을 인지 시켜줌 */
+  display: flex; /* 버튼이 테두리 정중앙 위치되게 */
+  justify-content: center;  /* 좌우(수평) 중앙 */
+  align-items: center; /* 상하(수직) 중앙 */ /*display, justify-content, align-items 이 세 개가 정중앙에 아이템을 위치하게 도와주는 것인가? */
+  position: absolute; /* 부모는 .inner 이미 relative로 되어 있음 */
+  top: 0;
+  bottom: 0;
+  margin: auto; /* 가운데 배치. height 값이 42px로 잘 들어가 있으므로 ok */
+}
+
+.awards .swiper-prev {
+  left: -100px;
+}
+.awards .swiper-next {
+  right: -100px;
+}
+.awards .swiper-prev:hover,
+.awards .swiper-next:hover {  
+  background-color: #fff;
+  color: #333;
+}
+
+/* <!-- FOOTER --> */
+footer {
+  background-color: #272727;
+  border-top: 1px ridge #333;
+}
+footer .inner {  
+  padding: 40px 0 60px 0; 
+}
+footer .menu {
+  display: flex;
+  justify-content: center;  
+}
+footer .menu li {
+  position: relative;
+}
+footer .menu li::before { /* before 는 inline요소임 */
+  content: ""; /* before에 들어갈 내용을 넣는거임. */
+  width: 3px;
+  height: 3px;
+  background-color:#555;
+  position: absolute; /* 또는 position: fixed 는 display 가 자동으로 block으로 바뀜. */
+  top: 0;
+  bottom: 0;
+  margin: auto; /* 중앙 위치 */
+  right: -1px;
+
+  
+}
+footer .menu li:last-child::before {
+  display: none; /* 마지막은 점을 없애줌 */
+}
+footer .menu li a {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px; /* font는 margin/padding의 위/아래값 사용 x => display: inline에서 block 으로 변경 필요*/
+  display: block;
+}
+
+footer .menu li a.green {
+  color: #669900;
+}
+
+footer .btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  
+}
+footer .btn-group .btn {
+  font-size: 12px;
+  margin-right: 10px;
+}
+footer .btn-group .btn:last-child {
+  margin-right: 0;
+}
+footer .info {
+  margin-top: 30px;
+  text-align: center;
+}
+footer .info span {
+  color: #999;
+  font-size: 12px;
+  padding-right: 20px;
+}
+footer .info span:last-child {
+  padding-right: 0;
+}
+footer .copyright {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  margin-top: 12px;
+}
+footer .logo {
+  margin: 30px auto 0; /* top left.right bottom     auto일 경우 조건: 가로너비 필요. img는 자체에 가로너비 있으므로 괜찮음  */
+  left: 100px;
+  display: block;  
+}
+
+/* <!-- TO-TOP 최상단으로 가기 --> */
+#to-top {
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;  
+  display: flex;
+  justify-content: center;
+  align-items: center; /* align-content와 align-items 헷갈리지 말기. */
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 9;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
