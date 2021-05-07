@@ -233,10 +233,6 @@ header .main-menu {
   z-index: 1;
 }
 
-header .main-menu .item {
-  
-}
-
 header .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
   font-family: Arial, sans-serif;
@@ -297,8 +293,6 @@ header .main-menu .item .item__contents .contents__texture {
   background-image: url("../images/main_menu_pattern.jpg");
 }
 
-
-
 header .main-menu .item .item__contents .contents__texture h4 {  
   font-weight: 700;  
   color: #999;  
@@ -328,6 +322,7 @@ header .badges .badge {
 
 
 
+
 /* <!-- FOOTER --> */
 footer {
   background-color: #272727;
@@ -352,9 +347,7 @@ footer .menu li::before { /* before 는 inline요소임 */
   top: 0;
   bottom: 0;
   margin: auto; /* 중앙 위치 */
-  right: -1px;
-
-  
+  right: -1px;  
 }
 footer .menu li:last-child::before {
   display: none; /* 마지막은 점을 없애줌 */
@@ -408,20 +401,3 @@ footer .logo {
   display: block;  
 }
 
-/* <!-- TO-TOP 최상단으로 가기 --> */
-#to-top {
-  width: 42px;
-  height: 42px;
-  background-color: #333;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  cursor: pointer;  
-  display: flex;
-  justify-content: center;
-  align-items: center; /* align-content와 align-items 헷갈리지 말기. */
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  z-index: 9;  
-}

@@ -627,3 +627,21 @@
   background-color: #fff;
   color: #333;
 }
+
+/* <!-- TO-TOP 최상단으로 가기 --> */
+#to-top {
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;  
+  display: flex;
+  justify-content: center;
+  align-items: center; /* align-content와 align-items 헷갈리지 말기. */
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 9;  
+}

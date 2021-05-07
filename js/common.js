@@ -8,6 +8,8 @@ searchEl.addEventListener('click', function() { // function() 핸들러
   searchInputEl.focus();
 })
 
+
+
 // <<--검색창에 돋보기 보였다 사라졌다 효과-->>
 // 검색창 - 핸들러 - searchEl에 classList 객체 추가 후 add 요소 실행 - focused 클래스 추가
 searchInputEl.addEventListener('focus', function(){
@@ -21,6 +23,7 @@ searchInputEl.addEventListener('blur', function(){
   searchEl.classList.remove('focused');
   searchInputEl.setAttribute('placeholder', ' ')
 })
+
 
 
 // Find this year
