@@ -21,7 +21,6 @@
   <meta property="twitter:image" content="../images/starbucks_seo.jpg" />
   <meta property="twitter:url" content="https://starbucks.co.kr" />
 
-
   <link rel="icon" href="../favicon.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
 
@@ -31,31 +30,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- 아이콘 보따리 링크 : google material icons 검색 > material.io 선택 > 메인로고 선택 > get started > 밑으로 내리면 Web > Web getting started > 밑으로 가면 <link rel=stylesheet...로 시작하는것 copy and paste <link..... main.css> 위에 붙이기-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <!-- js 링크걸기, defer 속성을 넣어서 js가 다 읽힌 후에 실행하게 함. -->
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/main.css" />
   
-  <!-- 스크롤 카운팅 조절 dcnjs  -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous"></script>
- <!-- GSAP & ScrollToPlugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js" integrity="sha512-kSI9CgGh60rJbNVeMJvfNX0UTKAq8LEOea/yKJQbFpIroxT7bf9/zUFXbnfsQP5F6xlOOHtCfBPgsE1ceiHnRw==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/signin.css">
 
-  <!-- SWIPER -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
-  <!-- Scroll Magic DCN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous"></script>
-
-  <!-- YOUTUBE -->    
-  <script defer src="../js/youtube.js"></script>
   <script defer src="../js/common.js"></script>
-  <script defer src="../js/main.js"></script>
-
 </head>
 
   <!-- HEADER -->
@@ -398,280 +379,32 @@
         </li>
       </ul>
     </div>
-
-    <div class="badges">
-      <div class="badge">
-        <img src="../images/badge3.jpg" alt="Badge">
-      </div>
-      <div class="badge">
-        <img src="../images/badge2.jpg" alt="Badge">
-      </div>
-    </div>
   </header>
 
-<!-- VISUAL -->
-<!-- section이 특별한 기능은 x. 직관적으로 보기 좋게. -->
-  <section class="visual">
-    <div class="inner">
 
-      <div class="title fade-in">
-        <img src="../images/visual_title.png" alt="STARBUCKS DELIGHTFUL START TO THE YEARS" />
-        <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a>
-      </div>
-      <div class="fade-in">
-        <img src="../images/visual_cup1.png" alt="new OATMEAL LATTE" class="cup1 image" />
-      <img src="../images/visual_cup1_text.png" alt="오트밀 라떼" class="cup1 text" /> 
-      </div>
-      <div class="fade-in">
-        <img src="../images/visual_cup2.png" alt="new STARBUCKS CRUMBLE MOCHA" class="cup2 image" />
-        <img src="../images/visual_cup2_text.png" alt="스타벅스 카라멜 크럼블 모카" class="cup2 text" />
-      </div>
-      <div class="fade-in">
-        <img src="../images/visual_spoon.png" alt="Spoon" class="spoon" />
-      </div>      
-    </div>
-  </section>
+  <!-- SIGN-IN -->
+  <section class="signin">
+    <h1>로그인</h1>
+    <div class="signin__card">
+      <h2> 
+        <strong>Welcome!</strong> 스타벅스에 오신 것을 환영합니다.</h2>
 
-  <section class="notice">
-    <div class="notice-line">      
-      <div class="bg-left"></div>
-      <div class="bg-right"></div>
-      <div class="inner">
+      <form>
+        <input type="text" placeholder="아이디를 입력하세요." /> <!-- 이 form태그로 로그인 정보 전송 -->
+        <input type="password" placeholder="비밀번호를 입력하세요." />
+        <input type="submit" value="로그인" /> <!-- 제출 의사를 입력 받음 --> 
+        <p>*비밀번호를 타 사이트와 같이 사용할 경우 도용 위험이 있으니,<br />
+          정기적으로 비밀번호를 변경하세요! </p>
+      </form>
 
-        <div class="inner__left">          
-          <h2>공지사항</h2>  
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="javascript:void(0)">크리스마스 & 연말연시 스타벅스 매장 영업시간 변경 안내</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="javascript:vold(a)">[당첨자 발표] 2021 스타벅스 플래너 영수증 이벤트</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="javascript:void(0)">스타벅스커피 코리아 애플리케이션 버전 업데이트 안내</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="javascript:void(0)">[당첨자 발표} 뉴이어 전자영수증 이벤트</a>
-              </div>
-            </div>
-          </div>             
-          <a href="javascript:void(0)" class="notice-line__more">
-            <!-- 이름만 복사해서 붙여도 됨  -->
-           <div class="material-icons">add_circle</div>    
-          </a>                 
-        </div>
-        
-        <div class="inner__right">
-          <h2>스타벅스 프로모션</h2>
-          <div class="toggle-promotion">
-            <div class="material-icons">upload</div>
-          </div>          
-        </div>
-      
-      </div>
-    </div>
-
-    <div class="promotion">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="../images/promotion_slide1.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
-            <a href="javascrip:void(o)" class="btn">자세히 보기</a>
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/promotion_slide2.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
-            <a href="javascrip:void(o)" class="btn">자세히 보기</a>
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/promotion_slide3.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
-            <a href="javascrip:void(o)" class="btn">자세히 보기</a>
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/promotion_slide4.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
-            <a href="javascrip:void(o)" class="btn">자세히 보기</a>
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/promotion_slide5.jpg" alt="2021 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!" />
-            <a href="javascrip:void(o)" class="btn">자세히 보기</a>
-          </div>          
-        </div>        
-      </div> <!-- swiper-container 끝나는 부분 -->
-
-      <div class="swiper-pagination"></div> <!-- 땡땡이로 페이지 선택 js 기능 구현-->
-      <div class="swiper-prev">
-       <div class="material-icons">arrow_back</div>       
-      </div> 
-      <div class="swiper-next">
-        <div class="material-icons">arrow_forward</div>        
+      <div class="actions">
+        <a href="javascript:void(0)">회원가입</a>
+        <a href="javascript:void(0)">아이디 찾기</a>
+        <a href="javascript:void(0)">비밀번호 찾기</a>          
       </div>
     </div>
   </section>
-
-  <section class="rewards">
-    <div class="bg-left"></div>
-    <div class="bg-right"></div> 
-    <div class="inner"> <!-- css에서 배경화면 넣어줌.  -->
-      <div class="btn-group">
-        <div class="btn btn--reverse sign-up">회원가입</div> <!-- btn--reverse css 만들어놓음. 반전효과 -->
-        <div class="btn sign-in">로그인</div>
-        <div class="btn gift">e-Gift 선물하기</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- YOUTUBE VIDEO -->
-  <section class="youtube">
-    <div class="youtube__area"> <!-- class는 중복가능한 이름, id는 중복불가(unique)-->
-      <div id="player"></div> <!-- 플레이어 데코위한 클라스 만드는 것보다 최대한 css 활용 -->
-    </div>
-    <div class="youtube__cover"></div>
-    <div class="inner">
-      <img src="../images/floating1.png" alt="icon" class="floating floating1" />
-      <img src="../images/floating2.png" alt="icon" class="floating floating2" />      
-    </div>
-  </section>
-
-  <!-- SEASON PRODUCT   -->
-  <section class="season-product scroll-spy">
-    <div class="inner">
-      <!-- floating3 는 원래 youtube 요소인데 가려지는 문제 때문에 여기로 옮김  -->
-      <img src="../images/floating3.png" alt="icon" class="floating floating3" />
-      <img src="../images/season_product_image.png" alt="" class="product back-to-position to-right delay-0" /> <!-- back-to-position 투명한 상태, to-right 왼쪽으로 이동되서 안보이는 상태 -->
-
-      <div class="text-group">
-        <img src="../images/season_product_text1.png" alt="" class="title back-to-position to-left delay-1" />
-        <img src="../images/season_product_text2.png" alt="" class="description back-to-position to-left delay-2" />
-        <div class="more back-to-position to-left delay-3"> <!-- btn은 클래스가 필요 없는데 만든 이유 > btn에 이미 transition이 .4s 되어 있음. 그런데 이 back-to-left에도 1s 효과가있기에 중복되므로 충돌. more를 따로 만들어 more가 우선순위로 해줌.-->
-          <a href="javascript:void(0)" class="btn">자세히 보기</a>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- RESERVE COFFEE -->
-  <section class="reserve-coffee scroll-spy">
-    <div class="inner">
-
-      <img src="../images/reserve_logo.png" alt="" class="reserve-logo back-to-position to-right delay-0" />
-
-      <div class="text-group">
-        <img src="../images/reserve_text.png" alt="" class="description back-to-position to-right delay-1" />
-        <a href="javascript:void(0)" class="btn btn--gold back-to-position to-right delay-2">자세히 보기</a>
-      </div>
-
-      <img src="../images/reserve_image.png" alt="" class="product back-to-position to-left delay-3" />
-
-    </div>   
-  </section>
-
-  <!-- PICK YOUR FAVORITE -->
-  <section class="pick-your-favorite scroll-spy">
-    <div class="inner">
-
-      <div class="text-group">
-        <img src="../images/favorite_text1.png" alt="" class="title back-to-position to-right delay-0" />
-        <img src="../images/favorite_text2.png" alt="" class="description back-to-position to-right delay-1" />
-        <div class="more back-to-position to-right delay-2">
-          <a href="javascript:void(0)" class="btn btn--white">자세히 보기</a>
-        </div>
-        
-      </div>
-    </div>    
-
-  </section>
-
-  <!-- 27.RESERVE STORE -->
-  <section class="reserve-store">
-    <div class="inner">
-
-      <div class="medal">
-        <div class="front">
-          <img src="../images/reserve_store_medal_front.png" alt="" />
-        </div>
-        <div class="back">
-          <img src="../images/reserve_store_medal_back.png" alt="" />
-          <a href="javascript:void(0)" class="btn">매장안내</a>
-        </div>       
-      </div>   
-
-    </div>
-  </section>
-
-  <!-- 28.FIND THE STORE -->
-  <section class="find-store scroll-spy">
-    <div class="inner">
-
-      <img src="../images/find_store_texture1.png" alt="" class="texture1" />
-      <img src="../images/find_store_texture2.png" alt="" class="texture2" />      
-      <img src="../images/find_store_picture1.jpg" alt="" class="picture picture1 back-to-position to-right  delay-0" /> 
-      <img src="../images/find_store_picture2.jpg" alt="" class="picture picture2 back-to-position to-right delay-1" />
-
-      <div class="text-group">
-        <img src="../images/find_store_text1.png" alt="" class="title back-to-position to-left delay-1" />
-        <img src="../images/find_store_text2.png" alt="" class="description back-to-position to-left delay-2" />
-        <div class="more back-to-position to-left delay-3">
-          <a href="javascript:void(0)" class="btn">매장찾기</a>
-        </div>        
-      </div>
-    </div>
-    <!-- find the store 만 scroll-spy 에 show클라스가 적용이 안되어 보니 처음에 클라스 만들데 section으로 안만들고 div로 만듬.  -->
-  </section>
-
-
-  <!-- AWARDS  -->
-  <section class="awards">
-    <div class="inner">
-
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="../images/awards_slide1.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/awards_slide2.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/awards_slide3.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/awards_slide4.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/awards_slide5.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/awards_slide6.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/awards_slide7.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/awards_slide8.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/awards_slide9.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/awards_slide10.jpg" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="../images/awards_slide1.jpg" alt="" />
-          </div>          
-        </div>
-      </div>
-
-      <div class="swiper-prev">        
-        <div class="material-icons">arrow_back</div> <!-- 테두리 없는 단순 화살표 -->
-      </div>
-      <div class="swiper-next">
-        <div class="material-icons">arrow_forward</div>
-      </div>
-      
-    </div>
-  </section>
-
+  
 
   <!-- FOOTER -->
   <footer>
@@ -706,10 +439,5 @@
     </div>
   </footer>
 
-  <!-- TO-TOP 최상단으로 가기 -->
-  <div id="to-top"> <!-- 하나만 사용하므로 id로 지정 -->
-    <div class="material-icons">arrow_upward</div>
-  </div>
 </body>
-
 </html>

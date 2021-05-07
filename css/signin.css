@@ -1,0 +1,85 @@
+.signin {
+  margin-top: 120px;
+  padding: 100px 0 150px; /* 상-중-하 */
+  background-image: url("../images/signin_bg.jpg");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* 스크롤할때 같이 따라가지 않고 고정정 */
+  background-size: cover;  /* 뷰포트에 더 넓은 이미지가 커버되도록 */  
+}
+
+.signin h1{  
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.signin__card { /* .signin .signin__card 라고 안 한 이유 : 이미 자식에 signin__card 라고 명시되어 있기 때문에 굳이 다시 알릴 필요 x. */
+  width: 500px;
+  margin: 0 auto;  /* 좌우 중앙 : width : 500px 이라고 되어 있으므로 중앙정렬 가능 */
+  border-radius: 6px;
+  background: #f6f5f0;   
+  box-shadow: 2px 2px 20px rgba(0,0,0,.3); /* x축/y축축/전체번짐 */
+  color: #555;
+}
+
+.signin__card h2 {
+  padding: 30px;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.signin__card h2 strong{
+  color: #063;
+  font-weight: 700;
+}
+
+.signin__card form {
+  padding: 30px 22px;
+}
+.signin__card form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none; /* 보더를 사용하니까 파란색 선 나오므로 */
+  box-sizing: border-box; /* padding 과 border 사용하니까 box size가 늘어나는 거 방지. 이거 하니까 박스가 프레임 안에 잘 맞게 들어감 */  
+  font-size: 14px;
+}
+
+.signin__card form [type="submit"] {
+  background-color: #006633;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.signin__card form p {
+  color: #063;
+  font-size: 12px;  
+  text-align: center;
+}
+.signin__card .actions {
+  display: flex; /* a태그들이 수평되게 */  
+  border-top: 1px solid #ddd;
+  
+}
+.signin__card .actions a {
+  flex-grow: 1; /* 증가너비 비율 1 */
+  flex-basis: 0;  /* 기본너비 0 */ 
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  border-right: 1px solid #ddd;
+  font-size: 13px;  
+}
+.signin__card .actions a:last-child {
+  border-right: none;
+}
+.signin__card .actions a:hover {
+  text-decoration: underline;
+}
